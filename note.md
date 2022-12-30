@@ -4,6 +4,15 @@ Các bước init:
 2. Cài đặt babel-plugin-module-resolver: Rút ngắn đường link khi import (có thể cài hoặc không)
 3. Cấu hình css/sass, cài scss, normalize
 4. Tiến hành cấu hình router/layout cho dự án: cài react-router-dom
+   ------ ..............................................................................................
+
+- Cấu hình redux cho react
+
+1. Tải npm redux
+2. tải npm react-redux
+3. Tiến hành cấu hình: https://redux.js.org/usage/configuring-your-store
+
+---
 
 setState là 1 hàm bất đồng bộ
 this.setState({
