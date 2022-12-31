@@ -5,12 +5,15 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from '~/store/reducers/rootReducer';
+import GlobalStyles from '~/hoc/GlobalStyles';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const reduxStore = createStore(rootReducer);
 root.render(
   <React.StrictMode>
     <Provider store={reduxStore}>
-      <App />
+      <GlobalStyles>
+        <App />
+      </GlobalStyles>
     </Provider>
   </React.StrictMode>,
 );

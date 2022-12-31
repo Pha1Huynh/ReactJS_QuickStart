@@ -1,0 +1,30 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --primary    : #fe2c55;
+    --black      : #000;
+    --white      : #fff;
+    --text-color : #161823;
+    --font-varela: 'Varela Round', sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+body {
+    font-size     : 1.6rem;
+    line-height   : 1.5;
+    text-rendering: optimizeSpeed;
+    color         : var(--text-color);
+}
+
+//Fonts emmbeded
