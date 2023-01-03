@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-class Default extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+import { connect } from 'react-redux';
 
-    render() {
-        return <></>;
-    }
+class DefaultClass extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return <></>;
+  }
 }
-
-export default Default;
+const mapStateToProps = (state) => {
+  return { dataRedux: state.users };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(DefaultClass);
