@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client';
 import '~/styles/styles.scss';
 import App from './App';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from '~/store/reducers/rootReducer';
-import thunk from 'redux-thunk';
+
+import { store } from '~/redux';
 import GlobalStyles from '~/hoc/GlobalStyles';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store = createStore(rootReducer, applyMiddleware(thunk));
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>

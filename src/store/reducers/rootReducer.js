@@ -1,10 +1,6 @@
-const initState = {
-  users: [
-    { id: 1, name: 'phat' },
-    { id: 2, name: 'phuoc' },
-  ],
-};
-const rootReducer = (state = initState, action) => {
-  return state;
-};
+import { combineReducers } from 'redux';
+import adminReducer from './adminReducer';
+const rootReducer = combineReducers({
+  admin: adminReducer,
+});
 export default rootReducer;
