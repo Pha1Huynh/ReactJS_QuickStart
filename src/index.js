@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client';
 import '~/styles/styles.scss';
 import App from './App';
 import { Provider } from 'react-redux';
-
-import { store } from '~/redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from '~/redux';
 import GlobalStyles from '~/hoc/GlobalStyles';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <GlobalStyles>
-        <App />
-      </GlobalStyles>
+      <PersistGate loading={null} persistor={persistor}>
+        <GlobalStyles>
+          <App />
+        </GlobalStyles>
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
 );
