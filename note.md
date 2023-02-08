@@ -65,3 +65,4 @@ Hàm mapStateToProps và mapDispatchToProps là redux truyền data và action c
   if (user.image) {
   imageBase64 = new Buffer(user.image, "base64").toString("binary");
   }
+   Đối với mongoose thì phải item.image = new Buffer(item.image, "bufer").toString("binary") ở client.
